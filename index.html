@@ -339,9 +339,9 @@
   }
   .sheet.open { display: block; animation: rise .32s cubic-bezier(.2,.7,.3,1) both; }
   .sheet-inner {
-    max-width: 1280px;
-    margin: 0;
-    padding: clamp(48px, 8vh, 76px) clamp(24px, 6vw, 80px) 110px;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: clamp(48px, 8vh, 76px) clamp(24px, 6vw, 40px) 110px;
   }
   .sheet h2 { margin-bottom: 10px; }
   .sheet .updated {
@@ -350,8 +350,8 @@
   }
   .sec {
     display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
-    gap: clamp(20px, 4vw, 56px);
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: clamp(20px, 3vw, 44px);
     padding: 26px 0;
     border-top: 1px solid var(--line);
   }
@@ -363,7 +363,7 @@
     display: flex; gap: 10px;
   }
   .sec h3 .n { color: var(--dim); font-weight: 400; font-variant-numeric: tabular-nums; }
-  .sec-body { max-width: 78ch; }
+  .sec-body { max-width: none; }
   .sheet p, .sheet li { color: var(--dim); font-size: 14.5px; margin: 0 0 12px; }
   .sheet .sec-body > :last-child { margin-bottom: 0; }
   .sheet ul { padding-left: 20px; margin: 0 0 12px; }
