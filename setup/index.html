@@ -440,7 +440,7 @@ insert into "keep-alive" (name) values ('keep-alive');</pre>
   <section class="step">
     <h2>Copy your config.</h2>
     <p class="lede">This is the value of the <code class="i">SUPABASE_KEEPALIVE_TARGETS</code> secret.
-      Save it as <code class="i">targets.json</code> in the repo &mdash; that filename is gitignored.</p>
+      Save it as <code class="i">targets.json</code> in the repo. That filename is gitignored.</p>
     <div class="snippet">
       <div class="snippet-head">
         <span class="file">targets.json</span>
@@ -528,7 +528,7 @@ insert into "keep-alive" (name) values ('keep-alive');</pre>
         <h3><span class="n">03</span> What this page is</h3>
         <div class="sec-body">
           <p>Only a config generator. It writes the JSON the Action reads and lets you test each
-            project first. Closing the tab changes nothing &mdash; the Action does the work.</p>
+            project first. Closing the tab changes nothing. The Action does the work.</p>
         </div>
       </section>
 
@@ -543,7 +543,7 @@ insert into "keep-alive" (name) values ('keep-alive');</pre>
       <section class="sec">
         <h3><span class="n">05</span> Good to know</h3>
         <div class="sec-body">
-          <p>GitHub switches off scheduled workflows after 60 days with no commits &mdash; any push
+          <p>GitHub switches off scheduled workflows after 60 days with no commits. Any push
             resets it. An already-paused project has to be restored from the Supabase dashboard
             first; this prevents pausing, it can't undo it.</p>
         </div>
@@ -1043,7 +1043,7 @@ async function testOne(i) {
     } else {
       const body = await res.text();
       statusEl.className = "status err";
-      statusEl.textContent = `HTTP ${res.status} — ${body.slice(0, 60)}`;
+      statusEl.textContent = `HTTP ${res.status}: ${body.slice(0, 60)}`;
     }
   } catch (e) {
     statusEl.className = "status err";
@@ -1118,7 +1118,7 @@ document.getElementById("import-go").addEventListener("click", () => {
   try {
     data = JSON.parse(raw);
   } catch (err) {
-    return impSay(`That isn't valid JSON — ${err.message}`, true);
+    return impSay(`That isn't valid JSON. ${err.message}`, true);
   }
 
   if (!Array.isArray(data)) data = [data];
@@ -1137,7 +1137,7 @@ document.getElementById("import-go").addEventListener("click", () => {
   closeImport();
   noteEl.className = "note";
   noteEl.textContent = incomplete
-    ? `Imported ${rows.length} project${rows.length > 1 ? "s" : ""} — ${incomplete} missing a URL or key.`
+    ? `Imported ${rows.length} project${rows.length > 1 ? "s" : ""}. ${incomplete} missing a URL or key.`
     : `Imported ${rows.length} project${rows.length > 1 ? "s" : ""}.`;
 });
 
@@ -1151,7 +1151,7 @@ document.querySelectorAll("[data-copy]").forEach(btn => {
       btn.textContent = "Copied";
       setTimeout(() => (btn.textContent = old), 1400);
     } catch (e) {
-      alert("Copy failed — select the text and copy manually.");
+      alert("Copy failed. Select the text and copy manually.");
     }
   });
 });
