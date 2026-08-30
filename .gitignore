@@ -1,0 +1,3 @@
+# Never commit real project URLs / keys
+targets.json
+*.local

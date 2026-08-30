@@ -1,0 +1,12 @@
+[
+  {
+    "name": "project-one",
+    "url": "https://aaaaaaaaaaaaaaaa.supabase.co",
+    "key": "eyJ...service_role_key_for_project_one..."
+  },
+  {
+    "name": "project-two",
+    "url": "https://bbbbbbbbbbbbbbbb.supabase.co",
+    "key": "eyJ...service_role_key_for_project_two..."
+  }
+]

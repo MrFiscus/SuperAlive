@@ -1,0 +1,23 @@
+name: SuperAlive
+
+on:
+  schedule:
+    # Every 3 days at 06:17 UTC. Well inside the 7-day free-tier pause window.
+    - cron: "17 6 */3 * *"
+  workflow_dispatch: {}
+
+# Prevent overlapping runs.
+concurrency:
+  group: supabase-keep-alive
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ping every Supabase project
+        env:
+          SUPABASE_KEEPALIVE_TARGETS: ${{ secrets.SUPABASE_KEEPALIVE_TARGETS }}
+        run: bash scripts/keep-alive.sh
