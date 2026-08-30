@@ -36,8 +36,9 @@ insert into "keep-alive" (name) values ('keep-alive');
 
 ### 4. Build your config
 
-Open [`setup/index.html`](setup/index.html) in a browser. Double-clicking the file is
-enough, there is nothing to install or serve.
+Use the hosted page at **https://mrfiscus.github.io/supabase-inactivityfix/**, or open
+[`index.html`](index.html) locally. Double-clicking the file is enough, there is nothing
+to install or serve.
 
 For each project, copy the **Project URL** and an **API key** from
 **Settings → API** in the Supabase dashboard, and press **Test connection** to confirm
