@@ -101,6 +101,16 @@ bash scripts/keep-alive.sh
 
 Requires `bash`, `curl`, `jq`.
 
+## Credits
+
+Based on [travisvn/supabase-pause-prevention](https://github.com/travisvn/supabase-pause-prevention)
+by [Travis Van](https://github.com/travisvn), which solved this with a Next.js app deployed
+on Vercel. The `keep-alive` table and the random-value trick that stops the query being
+cached both come from that project. SuperAlive reimplements the same idea as a GitHub
+Action, so there is nothing to host.
+
+That project is MIT licensed.
+
 ## Licence
 
 MIT. See [LICENSE](LICENSE).

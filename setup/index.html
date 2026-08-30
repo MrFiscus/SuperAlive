@@ -548,6 +548,18 @@ insert into "keep-alive" (name) values ('keep-alive');</pre>
             first; this prevents pausing, it can't undo it.</p>
         </div>
       </section>
+
+      <section class="sec">
+        <h3><span class="n">06</span> Credits</h3>
+        <div class="sec-body">
+          <p>Based on
+            <a href="https://github.com/travisvn/supabase-pause-prevention" target="_blank" rel="noopener">supabase-pause-prevention</a>
+            by <strong>Travis Van</strong>, which solved this with a Next.js app on Vercel. The
+            keep-alive table and the random-value trick that stops the query being cached both
+            come from that project, which is MIT licensed. SuperAlive reimplements the same idea
+            as a GitHub Action, so there is nothing to host.</p>
+        </div>
+      </section>
     </article>
 
     <article class="doc" data-doc="privacy">
